@@ -17,5 +17,9 @@
 
   <ItemGroup>
     <Folder Include="Pages\" />
+    <Folder Include="Pages\Level3\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpAutomationFrameworkLearning\CSharpAutomationFrameworkLearning.csproj" />
   </ItemGroup>
 </Project>

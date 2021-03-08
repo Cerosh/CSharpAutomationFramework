@@ -1,11 +1,16 @@
 ﻿using System;
+using OpenQA.Selenium;
+
 namespace CSharpAutomationFrameworkLearning.Base
 {
-    public class DriverContext
+    public static class DriverContext
     {
-        public DriverContext()
-        {
+        private static IWebDriver _driver;
 
+        public static IWebDriver Driver
+        {
+            get => _driver;
+            set => _driver = value;
         }
     }
 }
