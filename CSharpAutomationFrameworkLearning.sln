@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.809.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAutomationFrameworkLearning", "CSharpAutomationFrameworkLearning\CSharpAutomationFrameworkLearning.csproj", "{7A424DAC-4383-4AD0-B628-23C43D213984}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EAEmployeeTest", "EAEmployeeTest\EAEmployeeTest.csproj", "{0A5C49C5-C6AD-40ED-A942-4D579D8F89DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Level1", "Level1", "{45C275EA-FF7F-44E6-AB1D-E8E86E0D448B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +19,19 @@ Global
 		{7A424DAC-4383-4AD0-B628-23C43D213984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A424DAC-4383-4AD0-B628-23C43D213984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A424DAC-4383-4AD0-B628-23C43D213984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5C49C5-C6AD-40ED-A942-4D579D8F89DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5C49C5-C6AD-40ED-A942-4D579D8F89DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5C49C5-C6AD-40ED-A942-4D579D8F89DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5C49C5-C6AD-40ED-A942-4D579D8F89DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D68C7039-F228-45EE-B151-47BDF3FFE4C6}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A424DAC-4383-4AD0-B628-23C43D213984} = {45C275EA-FF7F-44E6-AB1D-E8E86E0D448B}
+		{0A5C49C5-C6AD-40ED-A942-4D579D8F89DF} = {45C275EA-FF7F-44E6-AB1D-E8E86E0D448B}
 	EndGlobalSection
 EndGlobal

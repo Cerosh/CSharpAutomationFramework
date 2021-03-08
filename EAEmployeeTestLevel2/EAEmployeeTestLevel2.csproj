@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="89.0.4389.2300" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="CSharpAutomationFrameworkLearningLevel2\Base\BasePage.cs" />
+    <Compile Remove="CSharpAutomationFrameworkLearningLevel2\Class1.cs" />
+    <Compile Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.AssemblyInfo.cs" />
+    <Compile Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" />
+    <Compile Remove="CSharpAutomationFrameworkLearningLevel2\Base\DriverContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\CSharpAutomationFrameworkLearningLevel2.csproj.nuget.g.targets" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\project.nuget.cache" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\CSharpAutomationFrameworkLearningLevel2.csproj.nuget.dgspec.json" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\project.assets.json" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\CSharpAutomationFrameworkLearningLevel2.csproj.nuget.g.props" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.dll" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.pdb" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.csprojAssemblyReference.cache" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.csproj.FileListAbsolute.txt" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.assets.cache" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.csproj.CoreCompileInputs.cache" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.AssemblyInfoInputs.cache" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\bin\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.deps.json" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\bin\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.dll" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\bin\Release\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.pdb" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\bin\Release\netcoreapp3.1\chromedriver" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Debug\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.assets.cache" />
+    <None Remove="CSharpAutomationFrameworkLearningLevel2\obj\Debug\netcoreapp3.1\CSharpAutomationFrameworkLearningLevel2.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="CSharpAutomationFrameworkLearningLevel2\CSharpAutomationFrameworkLearningLevel2.csproj" />
+  </ItemGroup>
+</Project>
