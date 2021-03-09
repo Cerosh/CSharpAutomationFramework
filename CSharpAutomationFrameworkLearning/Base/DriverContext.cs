@@ -12,5 +12,6 @@ namespace CSharpAutomationFrameworkLearning.Base
             get => _driver;
             set => _driver = value;
         }
+        public static Browser Browser { get; set; }
     }
 }

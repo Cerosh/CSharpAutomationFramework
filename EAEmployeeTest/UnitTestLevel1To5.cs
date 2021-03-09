@@ -2,6 +2,7 @@ using System;
 using CSharpAutomationFrameworkLearning.Base;
 using EAEmployeeTest.Pages;
 using EAEmployeeTest.Pages.Level3;
+using EAEmployeeTest.Pages.Level5;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -43,16 +44,16 @@ namespace EAEmployeeTest
         /*Page Object model is an object design pattern in Selenium, where web pages are represented as 
          * classes, and the various elements on the page are defined as variables on the class. 
          * All possible user interactions can then be implemented as methods on the class:*/
-                public void POMTest_Level1()
-                {
-                    Console.WriteLine("*****Test Case Level 1*****");
-                    LoginPage loginPage = new LoginPage(_driver);
-                    loginPage.OpenLoginWindow();
-                    loginPage.EnterUserName("admin");
-                    loginPage.EnterPassword("password");
-                    loginPage.ClickLogin();
-                }
-                [Test]
+        public void POMTest_Level1()
+        {
+            Console.WriteLine("*****Test Case Level 1*****");
+            LoginPage loginPage = new LoginPage(_driver);
+            loginPage.OpenLoginWindow();
+            loginPage.EnterUserName("admin");
+            loginPage.EnterPassword("password");
+            loginPage.ClickLogin();
+        }
+        [Test]
         /*Abstract class: is a restricted class that cannot be used to create objects(to access it, 
          * it must be inherited from another class). Abstract method: can only be used in an abstract class, 
          * and it does not have a body.The body is provided by the derived class (inherited from).*/
@@ -65,25 +66,26 @@ namespace EAEmployeeTest
             loginPage.EnterPassword("password");
             loginPage.ClickLogin();
         }
+        
         [Test]
-        public void PageNavigation_Level3()
+        public void PageNavigation_WithCurrentPage_Level4()
         {
-            Console.WriteLine("*****Test Case Level 3*****");
+            Console.WriteLine("*****Test Case Level 4*****");
             LoginPageLevel3 loginPage = new LoginPageLevel3();
             loginPage.ClickLoginLink();
             loginPage.Login("admin", "password");
-            EmployeePage employeePage = loginPage.ClickEmployeeList();
-            employeePage.Createnew();
+            CurrentPage = loginPage.ClickEmployeeList();
+            ((EmployeePage)CurrentPage).Createnew();
         }
         [Test]
-        public void PageNavigation_WithCurrentPage_Level3()
+        public void PageNavigation_WithGenerics_Level5()
         {
-            Console.WriteLine("*****Test Case Level 3*****");
-            LoginPageLevel3 loginPage = new LoginPageLevel3();
-            loginPage.ClickLoginLink();
-            loginPage.Login("admin", "password");
-            CurrentPage= loginPage.ClickEmployeeList();
-            ((EmployeePage)CurrentPage).Createnew();
+            Console.WriteLine("*****Test Case Level 5*****");
+            CurrentPage = GetInstance<LoginPageLevel5>();
+            CurrentPage.As<LoginPageLevel5>().ClickLoginLink();
+            CurrentPage.As<LoginPageLevel5>().Login("admin", "password");
+            CurrentPage = CurrentPage.As<LoginPageLevel5>().ClickEmployeeList();
+            CurrentPage.As<EmployeePageLevel5>().Createnew();
         }
 
     }

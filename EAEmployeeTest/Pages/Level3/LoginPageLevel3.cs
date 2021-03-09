@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 
 namespace EAEmployeeTest.Pages.Level3
 {
-    public class LoginPageLevel3 : BasePage
+    public class LoginPageLevel3 : BasePageLevel3
     {
         public void OpenLoginWindow() => _driver.FindElement(By.LinkText("Login")).Click();
         public void EnterUserName(String username) => _driver.FindElement(By.Id("UserName")).SendKeys(username);
