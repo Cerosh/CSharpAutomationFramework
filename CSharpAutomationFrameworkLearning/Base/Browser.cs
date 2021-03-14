@@ -1,5 +1,6 @@
 ﻿using System;
 using OpenQA.Selenium;
+using CSharpAutomationFrameworkLearning.Extensions;
 
 namespace CSharpAutomationFrameworkLearning.Base
 {
@@ -14,6 +15,11 @@ namespace CSharpAutomationFrameworkLearning.Base
             FireFox,
             Chrome
         }
-        public void GoToUrl(String url) => DriverContext.Driver.Url = url;
+        public void GoToUrl(String url)
+        {
+            DriverContext.Driver.Url = url;
+            _driver.WaitForDocumentLoaded();
+        }
     }
+
 }

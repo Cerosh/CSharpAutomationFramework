@@ -1,6 +1,7 @@
 using System;
 using CSharpAutomationFrameworkLearning.Base;
-using EAEmployeeTest.Pages.Level5;
+using CSharpAutomationFrameworkLearning.Config;
+using EAEmployeeTest.Pages.Level6;
 using NUnit.Framework;
 using static CSharpAutomationFrameworkLearning.Base.Browser;
 
@@ -8,23 +9,23 @@ namespace EAEmployeeTest
 {
     public class TestsWithDifferentBrowsers : Base
     {
-        string URL = "http://eaapp.somee.com/";
         [SetUp]
         public void Setup()
         {
+            ConfigReader.SetFrameworkSettings();
             OpenBrowser(BrowserType.Chrome);
-            DriverContext.Browser.GoToUrl(URL);
+            DriverContext.Browser.GoToUrl(Settings.AUT);
         }
 
         [Test]
         public void HandlingDifferentBrowser()
         {
             Console.WriteLine("*****Test Case Level 6*****");
-            CurrentPage = GetInstance<LoginPageLevel5>();
-            CurrentPage.As<LoginPageLevel5>().ClickLoginLink();
-            CurrentPage.As<LoginPageLevel5>().Login("admin", "password");
-            CurrentPage = CurrentPage.As<LoginPageLevel5>().ClickEmployeeList();
-            CurrentPage.As<EmployeePageLevel5>().Createnew();
+            CurrentPage = GetInstance<LoginPageLevel6>();
+            CurrentPage.As<LoginPageLevel6>().ClickLoginLink();
+            CurrentPage.As<LoginPageLevel6>().Login("admin", "password");
+            CurrentPage = CurrentPage.As<LoginPageLevel6>().ClickEmployeeList();
+            CurrentPage.As<EmployeePageLevel6>().Createnew();
         }
 
         [TearDown]

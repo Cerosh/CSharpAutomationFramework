@@ -20,6 +20,7 @@
     <Folder Include="Pages\Level3\" />
     <Folder Include="Pages\Level5\" />
     <Folder Include="Pages\Level6\" />
+    <Folder Include="Pages\Level4\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSharpAutomationFrameworkLearning\CSharpAutomationFrameworkLearning.csproj" />

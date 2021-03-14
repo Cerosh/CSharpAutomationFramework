@@ -1,7 +1,6 @@
 using System;
 using CSharpAutomationFrameworkLearning.Base;
 using EAEmployeeTest.Pages;
-using EAEmployeeTest.Pages.Level3;
 using EAEmployeeTest.Pages.Level5;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -65,17 +64,6 @@ namespace EAEmployeeTest
             loginPage.EnterUserName("admin");
             loginPage.EnterPassword("password");
             loginPage.ClickLogin();
-        }
-        
-        [Test]
-        public void PageNavigation_WithCurrentPage_Level4()
-        {
-            Console.WriteLine("*****Test Case Level 4*****");
-            LoginPageLevel3 loginPage = new LoginPageLevel3();
-            loginPage.ClickLoginLink();
-            loginPage.Login("admin", "password");
-            CurrentPage = loginPage.ClickEmployeeList();
-            ((EmployeePage)CurrentPage).Createnew();
         }
         [Test]
         public void PageNavigation_WithGenerics_Level5()
